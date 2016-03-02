@@ -1,0 +1,396 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin:0px;
+  width:100%;
+  height:100%;
+  background-color: #6699cc;
+  min-width: 700px;
+}
+.showtime{
+  width:20px;
+  height:30px;
+  background-image:url(0123456789.png) ;
+  background-position: 20px -20px;
+  display: inline-block;
+  transition: background-position 0.5s;
+  background-size: cover
+}
+.zero{
+  background-position: 20px -20px !important;
+}
+.one{
+  background-position: 20px -55px !important;
+}
+.two{
+  background-position: 20px -90px !important;
+}
+.three{
+  background-position: 20px -125px !important;
+}
+.four{
+  background-position: 20px -160px !important;
+}
+.five{
+  background-position: 20px -195px !important;
+}
+.six{
+  background-position: 20px -230px !important;
+}
+.seven{
+  background-position: 20px -265px !important;
+}
+.eight{
+  background-position: 20px -300px !important;
+}
+.nine{
+  background-position: 20px -335px !important;
+}
+#left-navi{
+  height:100%;
+  min-height: 750px;
+  width:200px;
+  background-color:#999999;
+  padding-top:20px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  transition: left 0.5s;
+  position: relative;
+  left:0px;
+}
+.leftnavihide{
+  left:-200px !important;
+}
+#slideinbutton{
+  position: absolute;
+  top:50%;
+  right:0px;
+  font-size: 34px;
+  cursor: pointer;
+}
+#user-icon{
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  margin:auto;
+  background-color: #66ccff;
+}
+#user-name{
+  font-size:14px;
+  text-align: center;
+  margin-bottom: 50px
+}
+#infobox{
+  height:400px;
+  width:80%;
+  margin:auto;
+  background-color: #666;
+  padding:10px 5px;
+}
+#nowssd{
+  width:80px;
+  height:30px;
+  background-image: url(SSD.png); 
+  margin:auto;
+  transition: background-position 0.5s;
+}
+#toggleicon{
+  width:30px;
+  margin:auto;
+  display: block;
+  cursor: pointer;
+}
+.inputssd{
+  margin:auto;
+  display: block;
+  width:30px;
+  height:20px;
+}
+.ssd1{
+  background-position:0px 3px ;
+}
+.ssd2{
+  background-position:0px -39px ;
+}
+.ssd3{
+  background-position:0px -80px ;
+}
+.ssd4{
+  background-position:0px -123px ;
+}
+.ssd5{
+  background-position:0px -165px ;
+}
+.ssd6{
+  background-position:0px -207px ;
+}
+.ssd7{
+  background-position:0px -248px ;
+}
+.ssd8{
+  background-position:0px -290px ;
+}
+.ssd9{
+  background-position:0px -332px ;
+}
+.status{
+  margin-bottom: 3px;
+  font-size: 14px;
+  text-align: center;
+  font-family: Open Sans;
+  display: block;
+}
+#wraper{
+  display:inline-block;
+  width:70%;
+  height:100%;
+  position: relative
+}
+#questionarea{
+  display:inline-block;
+  position:relative;
+  top:100px;
+  width:500px;
+  left:50%;
+  margin-left:-250px;
+}
+#leftcount{
+  position: relative;
+}
+#content{
+  width:480px;
+  height:180px;
+  background-color: #ccffff;
+  display:inline-block;
+  padding:10px 10px
+}
+.answer-choice{
+  margin:20px 0 20px 0;
+  background-color: #99ccff;
+  height:40px;
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.5s,background-color 0.5s;
+  padding:5px 0px 5px 10px ;
+}
+.line{
+  width:3px;
+  height:60px;
+  background-color: black;
+  position:absolute;
+  left:80px;
+  top:2px;
+  transform: rotate(30deg)
+}
+#right-navi{
+  width:50px;
+  display: inline-block;
+  height:650px;
+  background-color: aliceblue;
+  position: absolute;
+  right:-5%;
+  top:50px;
+}
+.mode-sel{
+  width:50px;
+  height:50px;
+}
+#jumpicon{
+  cursor: pointer;
+}
+.icon{
+  width:30px;
+  height:30px;
+  margin:10px;
+  cursor: pointer;
+}
+.choiceright{
+  background-color: #fff
+}
+.choicewrong{
+  background-color: red;
+  animation: ani4 0.1s;
+  animation-iteration-count: 5;
+  opacity: 0.5;
+}
+#jumpinput{
+  position:absolute;
+  width:0px;
+  height:30px;
+  top:10px;
+  left:-65px;
+  background-color: #fff;
+  border-radius:5px;
+  transition: width 0.5s;
+}
+#jumpinput2{
+  width:50px;
+  height:14px;
+  position:relative;
+  left:3px;
+  top:4px
+}
+.arrow-right{
+  width:0px;
+  height:0px;
+  border-bottom: 5px solid transparent;
+  border-top:5px solid transparent;
+  border-left:5px solid #fff;
+}
+.jumparrow{
+  position:absolute;
+  top:10px;
+  right:-5px;
+  
+}
+.number,#flipup,#flipdown{
+  width:50px;
+  text-align: center;
+  height:32px;
+  cursor: pointer;
+  line-height: 30px;
+  position: relative;
+}
+.number{
+  transition: opacity 1s,top 0.5s;
+  opacity: 0.5;
+}
+#question-sel{
+  position:relative;
+  overflow: hidden;
+}
+.number:hover,#flipup:hover,#flipdown:hover{
+  background-color: #66ccff;
+  opacity: 1
+}
+.on{
+  background-color: #66ccff !important;
+  opacity: 1;
+}
+#no-wrapper{
+  height:382px;
+  overflow: hidden;
+}
+#num-bar{
+  position: relative;
+  top:0px;
+  transition:top 0.5s;
+}
+#wrong-col{
+  cursor:pointer;
+}
+.like{
+  background-color: gold;
+}
+.wrong{
+  background-color: purple;
+  transition:top 0.5s;
+}
+.hidden{
+  display: none;
+}
+.questionswitch{
+  animation: ani1 0.5s;
+  animation-iteration-count: 1;
+}
+.questionswitch2{
+  animation: ani2 0.5s;
+  animation-iteration-count: 1;
+}
+.questionswitch3{
+  animation:ani3 0.5s;
+  animation-iteration-count: 1;
+}
+#choicewrapper{
+  width:500px;
+}
+.wrapper{
+  width:80px;
+  margin: auto;
+}
+.totalcount,.wrongcount{
+  display: inline-block;
+  width:100%;
+  font-size:12px;
+}
+.countstatus{
+  position: relative;
+  top:-11px
+}
+.showtotalcount,.showwrongcount,.showrightrate,.showleftcount{
+  width:20px;
+  height:30px;
+  background-image:url(0123456789.png) ;
+  background-position: 20px -20px;
+  display: inline-block;
+  transition: background-position 0.5s;
+  background-size: cover;
+}
+#leftcount{
+  height:60px
+}
+#facestatus{
+  height:100px;
+  line-height: 100px;
+  text-align: center;
+  font-size:30px;
+  font-family: Arial;
+}
+.uicon{
+  height:100px;
+  width:100px;
+  margin:auto;
+}
+@keyframes ani1{
+  0%{
+    top:0px;
+    position:absolute;
+  }
+  100%{
+    top:-300px;
+    position:absolute;
+    opacity: 0;
+  }
+}
+@keyframes ani2{
+  0%{
+    top:0px;
+    position: absolute;
+  }
+  100%{
+    top:300px;
+    position:absolute;
+    opacity: 0;
+  }
+}
+@keyframes ani3{
+  0%{
+    transform: scale(0,0)
+  }
+  100%{
+    transform:scale(1,1)
+  }
+}
+@keyframes ani4{
+  0%{
+    top:5px;
+  }
+  100%{
+    top:0px;
+  }
+}
+@media screen and (max-width:800px){
+  #left-navi{
+    left:-200px;
+  }
+  #questionarea{
+    left:20%;
+  }
+  #right-navi{
+    right:0%;
+  }
+  #wraper{
+    left:0%;
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Made with Thimble</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script-1.js"></script>
+</head>
+<body>
+  <div id="left-navi">
+    <div class="uicon" onclick="clearline()">
+      <img src='#{AVATAR}' id="user-icon"/>
+    </div>
+    <p id="user-name">#{NICK}</p>
+    <div id="infobox">
+      <span class="status">你已经开始做了</span>
+      <div id="time">
+        <div class="showtime">
+          
+        </div>
+        <div class="showtime">
+
+        </div>
+        <div class="showtime">
+
+        </div>
+        <div class="showtime">
+
+        </div>
+        <div class="showtime">
+
+        </div>
+        <div class="showtime">
+
+        </div>
+      </div>
+      <div id="ssd">
+        <span class="status">你现在在做</span>
+        <div id="nowssd" class="ssd1">
+
+        </div>
+        <img id="toggleicon" src="toggle.png" title="切换" onclick="changessd()"/>
+      </div>
+      <div id='leftcount'>
+        <div>
+          <div class="showleftcount">
+          </div>
+          <div class="showleftcount">
+          </div>
+          <div class="showleftcount">
+          </div>
+        </div>
+        <div class="line">
+          
+        </div>
+        <div style="float:right">
+          <div class="showleftcount">
+          </div>
+          <div class="showleftcount">
+          </div>
+          <div class="showleftcount">
+          </div>
+        </div>
+      </div>
+      <div id="totalcount">
+        <div class="wrapper totalcount">
+          <span class="countstatus">
+            你已经做了
+          </span>
+          <div class="showtotalcount">
+          </div>
+          <div class="showtotalcount">
+          </div>
+          <div class="showtotalcount">
+          </div>
+          <span class="countstatus">题</span>
+        </div>
+      </div>
+      <div id="wrongcount">
+        <div class="wrapper wrongcount">
+          <span class="countstatus">
+            你已经错了
+          </span>
+          <div class="showwrongcount">
+          </div>
+          <div class="showwrongcount">
+          </div>
+          <div class="showwrongcount">
+          </div>
+          <span class="countstatus">题</span>
+        </div>
+      </div>
+      <div id="rightrate">
+        <div class="wrapper wrongcount">
+          <span class="countstatus">
+            你的正确率
+          </span>
+          <div class="showrightrate">
+          </div>
+          <div class="showrightrate">
+          </div>
+          <div class="showrightrate">
+          </div>
+          <span class="countstatus" style="font-size:16px">%</span>
+        </div>
+      </div>
+      <div id="facestatus">
+        (¦3[▓▓] 
+      </div>
+    </div>
+    <div id="slideinbutton" onclick="slide()">
+      &lt
+    </div>
+  </div>
+  <div id="wraper">
+    <div id="questionarea">
+      <div id="content">
+        
+      </div>
+      <div id="choicewrapper" >
+        <div class="answer-choice" id="A" onclick="answer()">
+
+        </div>
+        <div class="answer-choice" id="B" onclick="answer()">
+
+        </div>
+        <div class="answer-choice" id="C" onclick="answer()">
+
+        </div>
+        <div class="answer-choice" id="D" onclick="answer()">
+
+        </div>
+      </div>
+    </div>
+    <div id="right-navi">
+      <div class="mode-sel" id="jump">
+        <img id="jumpicon" class="icon" src="jumpto.png"/>
+      </div>
+      <div class="mode-sel">
+        <img class='icon' id="likeit" src="likeit.png" onclick="addlike()"/>
+      </div>
+      <div class="mode-sel" id="like">
+        <img src="star.png" class='icon' id="likeicon" onclick="likecollect()"/>
+      </div>
+      <div class="mode-sel" id="wrong-col" onclick="wrongcollect()">
+        <img src="close.png" class="icon" id="wrongicon"/>
+      </div>
+      <div id="question-sel">
+        <div id="flipup" onclick="numberscroll()">∧</div>
+        <div id="no-wrapper">
+          
+        </div>
+        <div id="flipdown" onclick="numberscroll()">∨</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

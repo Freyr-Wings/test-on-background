@@ -1,0 +1,6 @@
+{
+  "content": [
+    'what does the fox say?','A: wapiapiapiapiapiapow','B:hateehateehateehoh','C:jachachachachachaja','D:chachachachachachachow'
+  ],
+  "answer":"A"
+}
