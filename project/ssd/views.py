@@ -4,16 +4,13 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.template import RequestContext
 from django import forms
 from models import User
-from django.contrib.postgres.fields.jsonb import JSONField
 
 #表单
 class UserForm(forms.Form): 
     username = forms.CharField(label='用户名',max_length=100)
     password = forms.CharField(label='密码',widget=forms.PasswordInput())
 
-class UserList(forms.Form):
-    username = forms.CharField(label='用户名',max_length=100)
-    listofquestions = JSONField()
+
 #注册
 def regist(req):
     if req.method == 'POST':
@@ -56,15 +53,6 @@ def login(req):
 #登陆成功
 def index(req):
     username = req.COOKIES.get('username','')
-    if req.method == 'POST':
-        loq = UserList(req.POST)
-        if loq.is_valid():
-            username = loq.cleaned_data['username']
-            listofquestions = loq.cleaned_data['formofquestions']
-            if User.objects.filter(username__exact == username):
-                User.objects.create(username= username, listofquestions= listofquestions)
-    elif req.method == 'GET':
-        return render_to_response('index.html', {'username':username}, {'formofquestions':listofquestions}, {''})
     return render_to_response('index.html' ,{'username':username} ,{''})
 
 #退出
@@ -74,10 +62,3 @@ def logout(req):
     #清理cookie里保存username
     response.delete_cookie('username')
     return response
-
-
-
-
-
-
-

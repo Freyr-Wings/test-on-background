@@ -383,32 +383,23 @@
       }
     }
     //为题号添加title属性
-    var listcollectwrong = []
-    var listcollect = []
-    var listwrong = []
     function addtitle(){
       var dd=document.getElementsByClassName('number')
       for (var i=0;i<dd.length;i++){
         if(dd[i].classList.contains('wrong')&&dd[i].classList.contains('like')){
           dd[i].setAttribute('title','LIKE but WRONG')
-          listcollectwrong.push(i)
         }
         else if(dd[i].classList.contains('wrong')){
           dd[i].setAttribute('title','WRONG HERE!')
-          listwrong.push(i)
         }
         else if(dd[i].classList.contains('like')){
           dd[i].setAttribute('title',"I'm LOVING it!")
-          listcollect.push(i)
         }
         else{
           dd[i].setAttribute('title','Nothing here')
         }
       }
     }
-    var formofquestions=[listcollect, listwrong, listcollectwrong];
-    var form1 = document.getElementById('formofquestions');
-    form1.submit();
     //题目切换的效果
     function questionswitch(){
       setTimeout(function(){
@@ -441,17 +432,17 @@
     function getopenid(){
       var request
       request=new XMLHttpRequest()
-      request.open('get','formofquestions',true)
+      request.open('get','{% static 'ssd/id1.txt'%}',true)
       request.send()
       request.onreadystatechange=function(){
         if(request.readyState==4&&request.status==200){
           content=request.responseText
           content=eval("("+content+")")
-          wronglist=content.listcollect
+          wronglist=content.mistake.split(';')
           openid=content.id
-          var wrong=content.listwrong
-          likelist=content.listcollect
-          var like=content.listcollect
+          var wrong=wronglist[0].split(',')
+          likelist=content.mark.split(';')
+          var like=likelist[0].split(',')
           hasdonelist=content.hasdone.split(';')
           donequestion=hasdonelist[0].split(',')
           predonelist=content.predone.split(';')
